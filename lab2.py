@@ -11,10 +11,12 @@ rm = 1
 
 ax = plt.axes(xlim=(-5, 5), ylim=(-5, 5))
 patch = plt.Circle((0, 0), rm, fill=False, fc='y')
+main_circle = plt.Circle((0, 0), Rb, fill=False, fc='y')
 
 def init():
     patch.center = (0, 0)
     ax.add_patch(patch)
+    ax.add_patch(main_circle)
     return patch,
 
 def animate(i):
