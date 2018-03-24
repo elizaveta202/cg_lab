@@ -4,7 +4,7 @@ from matplotlib import animation
 
 fig = plt.figure()
 fig.set_dpi(100)
-fig.set_size_inches(7, 6.5)
+fig.set_size_inches(8, 8)
 
 Rb = 3
 rm = 1
