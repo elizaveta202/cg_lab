@@ -6,10 +6,10 @@ fig = plt.figure()
 fig.set_dpi(100)
 fig.set_size_inches(8, 8)
 
-Rb = 3
+Rb = 9
 rm = 1
 
-ax = plt.axes(xlim=(-5, 5), ylim=(-5, 5))
+ax = plt.axes(xlim=(-Rb-1, Rb+1), ylim=(-Rb-1, Rb+1))
 patch = plt.Circle((0, 0), rm, fill=False, fc='y')
 main_circle = plt.Circle((0, 0), Rb, fill=False, fc='y')
 
@@ -32,4 +32,6 @@ anim = animation.FuncAnimation(fig, animate,
                                interval=1,
                                blit=True)
 
+# plt.xlim(Rb+1, Rb+1)
+# plt.ylim(Rb+1, Rb+1)
 plt.show()
