@@ -5,7 +5,7 @@ from matplotlib.widgets import TextBox
 
 fig = plt.figure()
 fig.set_dpi(100)
-fig.set_size_inches(8, 8)
+fig.set_size_inches(6, 6)
 
 Rb = 9
 rm = 1
@@ -58,8 +58,8 @@ def submit(text):
     anim.frame_seq = anim.new_frame_seq()
     anim.event_source.start()
 
-axbox = plt.axes([0.1, 0.05, 0.08, 0.08])
-text_box = TextBox(axbox, 'R')
+axbox = plt.axes([0.11, 0.90, 0.08, 0.08])
+text_box = TextBox(axbox, 'R, r = ')
 text_box.on_submit(submit)
 
 plt.show()
