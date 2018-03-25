@@ -43,9 +43,11 @@ anim = animation.FuncAnimation(fig, animate2,
                                blit=False)
 
 def submit(text):
-    Rb = int(text)
-    print(Rb)
+    Rb = int(text.split(',')[0])
+    rm = int(text.split(',')[1])
+    print(Rb, rm)
     main_circle.set_radius(Rb)
+    patch.set_radius(rm)
     plt.draw()
 
     anim.__init__(fig, animate2, fargs=(Rb, rm),
