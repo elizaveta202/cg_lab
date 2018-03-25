@@ -46,8 +46,12 @@ def submit(text):
     Rb = int(text.split(',')[0])
     rm = int(text.split(',')[1])
     print(Rb, rm)
+    # ax = plt.axes(xlim=(-Rb-1, Rb+1), ylim=(-Rb-1, Rb+1))
+    ax.set_xlim(-Rb-1, Rb+1)
+    ax.set_ylim(-Rb-1, Rb+1)
     main_circle.set_radius(Rb)
     patch.set_radius(rm)
+
     plt.draw()
 
     anim.__init__(fig, animate2, fargs=(Rb, rm),
